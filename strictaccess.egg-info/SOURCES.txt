@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+strictaccess/__init__.py
+strictaccess/access_tags.py
+strictaccess/core.py
+strictaccess/decorators.py
+strictaccess/exceptions.py
+strictaccess.egg-info/PKG-INFO
+strictaccess.egg-info/SOURCES.txt
+strictaccess.egg-info/dependency_links.txt
+strictaccess.egg-info/top_level.txt

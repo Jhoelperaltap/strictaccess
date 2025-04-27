@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: strictaccess
+Version: 0.1.0
+Summary: Enforces strict access control for Python classes, with strict mode and access decorators.
+Home-page: https://github.com/jhoelperalta/strictaccess
+Author: Jhoel Peralta
+Author-email: jhoelperaltap@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# strictaccess
+
+Paquete Python para imponer control estricto de acceso (`private`, `protected`, `public`) en clases de Python, similar a lenguajes como Java o C++.
+
+## CaracterÃ­sticas
+- Protege atributos y mÃ©todos.
+- Soporta modo Debug para desarrollo.
+- Decoradores `@private`, `@protected`, `@public`.
+
+## InstalaciÃ³n
+```bash
+pip install strictaccess
