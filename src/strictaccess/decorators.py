@@ -1,5 +1,6 @@
 from .core import AccessControlMixin
 
+
 def strict_access_control(debug=False):
     def decorator(cls):
         class Wrapped(AccessControlMixin, cls):
