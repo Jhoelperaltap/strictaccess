@@ -1,0 +1,3 @@
+# Código de Conducta
+
+Este proyecto adopta el [Contributor Covenant](https://www.contributor-covenant.org/)...

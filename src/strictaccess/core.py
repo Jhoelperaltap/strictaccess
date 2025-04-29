@@ -7,22 +7,28 @@ class AccessControlMixin:
     def __getattribute__(self, name):
         value = super().__getattribute__(name)
 
-        if name.startswith('__') and not name.endswith('__'):
-            self._handle_violation('private', name)
-        elif name.startswith('_') and not name.startswith('__'):
-            caller = inspect.stack()[1].frame.f_locals.get('self', None)
-            if caller is not self:
-                self._handle_violation('protected', name)
-
-        # Check access level for methods
+        # 1) Primero: control basado en decoradores (solo para callables)
         if callable(value):
             access_level = getattr(value, '_access_level', None)
             if access_level == 'private':
                 self._handle_violation('private', name)
-            elif access_level == 'protected':
+                return value
+            if access_level == 'protected':
                 caller = inspect.stack()[1].frame.f_locals.get('self', None)
                 if caller is not self:
                     self._handle_violation('protected', name)
+                return value
+            # Si no está decorado, dejamos que la lógica de nombres lo gestione
+
+        # 2) Luego: control basado en prefijos de nombre (para atributos y métodos no decorados)
+        if name.startswith('__') and not name.endswith('__'):
+            # "__foo" sin "__" final → privado
+            self._handle_violation('private', name)
+        elif name.startswith('_') and not name.startswith('__'):
+            # "_foo" sin "__" inicial → protegido
+            caller = inspect.stack()[1].frame.f_locals.get('self', None)
+            if caller is not self:
+                self._handle_violation('protected', name)
 
         return value
 

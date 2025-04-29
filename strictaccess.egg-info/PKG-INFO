@@ -6,12 +6,18 @@ Home-page: https://github.com/jhoelperaltap/strictaccess
 Author: Jhoel Peralta
 Author-email: jhoelperaltap@gmail.com
 License: MIT
+Keywords: access control,python,strict
 Classifier: Programming Language :: Python :: 3
 Classifier: License :: OSI Approved :: MIT License
 Classifier: Operating System :: OS Independent
 Requires-Python: >=3.7
 Description-Content-Type: text/markdown
 License-File: LICENSE
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: flake8; extra == "dev"
+Requires-Dist: black; extra == "dev"
 Dynamic: author
 Dynamic: author-email
 Dynamic: classifier
