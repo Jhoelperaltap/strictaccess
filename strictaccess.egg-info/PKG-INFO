@@ -1,8 +1,8 @@
-Metadata-Version: 2.1
+Metadata-Version: 2.4
 Name: strictaccess
-Version: 0.1.0
+Version: 0.1.2
 Summary: Enforces strict access control for Python classes, with strict mode and access decorators.
-Home-page: https://github.com/jhoelperalta/strictaccess
+Home-page: https://github.com/jhoelperaltap/strictaccess
 Author: Jhoel Peralta
 Author-email: jhoelperaltap@gmail.com
 License: MIT
@@ -12,16 +12,38 @@ Classifier: Operating System :: OS Independent
 Requires-Python: >=3.7
 Description-Content-Type: text/markdown
 License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
 
 # strictaccess
 
-Paquete Python para imponer control estricto de acceso (`private`, `protected`, `public`) en clases de Python, similar a lenguajes como Java o C++.
+![PyPI Version](https://img.shields.io/pypi/v/strictaccess)
+![License](https://img.shields.io/pypi/l/strictaccess)
+![Python Versions](https://img.shields.io/pypi/pyversions/strictaccess)
+![Downloads](https://img.shields.io/pypi/dm/strictaccess)
+
+**strictaccess** es un paquete de Python que permite imponer control estricto de acceso sobre atributos y mÃ©todos en clases, similar a lo que ocurre en lenguajes como Java o C++.
+
+Con este paquete puedes controlar el acceso a tus atributos y mÃ©todos mediante los decoradores `@private`, `@protected`, `@public`.
 
 ## CaracterÃ­sticas
-- Protege atributos y mÃ©todos.
-- Soporta modo Debug para desarrollo.
-- Decoradores `@private`, `@protected`, `@public`.
+
+- **Control estricto de acceso**: Asegura que los atributos y mÃ©todos sean correctamente accesibles solo desde donde deberÃ­an serlo.
+- **Decoradores disponibles**: `@private`, `@protected`, `@public`.
+- **Modo Debug**: Para facilitar el desarrollo y el monitoreo de los accesos.
+- **Excepciones personalizadas**: `PrivateAccessError` y `ProtectedAccessError` para manejar accesos no permitidos.
 
 ## InstalaciÃ³n
+
+Puedes instalar **strictaccess** desde PyPI utilizando `pip`:
+
 ```bash
 pip install strictaccess
