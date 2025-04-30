@@ -6,3 +6,4 @@ Guía de instalación y uso.
 
 ```bash
 pip install strictaccess
+
